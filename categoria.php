@@ -1,3 +1,13 @@
+<?php
+require_once("config.php");
+$data = new Config();
+$allCategory = $data->obtenerCategory();
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -63,10 +73,22 @@
 
             <!-- ///////Llenado DInamico desde la Base de Datos -->
          
-       
+            <?php
+            foreach ($allCategory as $key => $val) {
+            ?>
+            <tr>
+              <td> <?php echo $val['categoria_id']?></td>
+              <td> <?php echo $val['nombre']?></td>
+              <td> <?php echo $val['descripcion']?></td>
+              <td><img src="<?php echo $val['imagen']?>" alt="" width="80px" ></td>
+              <td> <a  class="btn btn-danger" href="">BORRAR </a></td>
+              <td> <a  class="btn btn-primary" href="">MODIFICAR </a></td>
+            </tr>
 
           </tbody>
-        
+        <?php
+        }    
+        ?>
         </table>
 
       </div>

@@ -58,6 +58,17 @@ class Config{
         }
     }
 
+    public function obtenerCategory(){
+        try {
+            $stm = $this -> dbCnx -> prepare("SELECT * FROM categorias");
+            $stm -> execute();
+            return $stm -> fetchAll();
+        } catch (Exception $e) {
+            return $e -> getMessage();
+        }
+
+            }
+
 }
 
 
