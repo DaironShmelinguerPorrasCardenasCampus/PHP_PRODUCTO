@@ -54,7 +54,7 @@
               <th scope="col">ID PRODUCTO</th>
               <th scope="col">NOMBRE</th>
               <th scope="col">DESCRIPCIÓN</th>
-              <th scope="col">IMAGENE</th>
+              <th scope="col">IMAGEN</th>
               <th scope="col">DETALLE</th>
               <th scope="col">ELIMINAR</th>
               <th scope="col">ACTUALIZAR</th>
@@ -75,13 +75,6 @@
 
     </div>
 
-    <div class="parte-derecho " id="detalles">
-      <h3>DETALLE DEL PRODUCTO</h3>
-      <p>Cargando...</p>
-       <!-- ///////Generando la grafica -->
-
-    </div>
-
 
 
 
@@ -91,41 +84,52 @@
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
         <div class="modal-content" >
           <div class="modal-header" >
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Estudiante</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">CATEGORIAS</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body" style="background-color: rgb(231, 253, 246);">
             <form class="col d-flex flex-wrap" method="post">
               <div class="mb-1 col-12">
-                <label for="nombres" class="form-label">Nombres</label>
+                <label for="nombre" class="form-label">NOMBRE DEL PRODUCTO</label>
                 <input 
                   type="text"
-                  id="nombres"
-                  name="nombres"
+                  id="nombre"
+                  name="nombre"
                   class="form-control"  
                 />
               </div>
 
               <div class="mb-1 col-12">
-                <label for="direccion" class="form-label">Direccion</label>
+                <label for="descripcion" class="form-label">DESCRIPCIÓN</label>
                 <input 
                   type="text"
-                  id="direccion"
-                  name="direccion"
+                  id="descripcion"
+                  name="descripcion"
                   class="form-control"  
                 />
               </div>
 
               <div class="mb-1 col-12">
-                <label for="logros" class="form-label">Logros</label>
+                <label for="imagen" class="form-label">IMAGEN</label>
                 <input 
                   type="text"
-                  id="logros"
-                  name="logros"
+                  id="imagen"
+                  name="imagen"
                   class="form-control"  
                  
                 />
               </div>
+              <div class="mb-1 col-12">
+                <label for="detalle" class="form-label">DETALLE</label>
+                <input 
+                  type="text"
+                  id="detalle"
+                  name="detalle"
+                  class="form-control"  
+                />
+              </div>
+
+          
 
               <div class=" col-12 m-2">
                 <input type="submit" class="btn btn-primary" value="guardar" name="guardar"/>
