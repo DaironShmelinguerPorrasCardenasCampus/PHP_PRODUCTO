@@ -8,7 +8,7 @@ if(!defined("DB_HOST")){
 }
 
 if(!defined("DB_NAME")){
-    define("DB_NAME", "productos");
+    define("DB_NAME", "supermarket");
 }
 if(!defined("DB_USER")){
     define("DB_USER", "root");
