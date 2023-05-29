@@ -81,7 +81,7 @@ $allCategory = $data->obtenerCategory();
               <td> <?php echo $val['nombre']?></td>
               <td> <?php echo $val['descripcion']?></td>
               <td><img src="<?php echo $val['imagen']?>" alt="..." width="80px" ></td>
-              <td> <a  class="btn btn-danger" href="">BORRAR </a></td>
+              <td> <a  class="btn btn-danger" href="borrarCategoria.php?categoria_id=<?= $val['categoria_id']?>&&req=delete">BORRAR </a></td>
               <td> <a  class="btn btn-primary" href="">MODIFICAR </a></td>
             </tr>
 
