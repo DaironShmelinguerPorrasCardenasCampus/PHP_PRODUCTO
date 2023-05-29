@@ -69,6 +69,16 @@ class Category extends Conexion{
 
             }
 
+            public function deleteCategory(){
+                try {
+                    $stm = $this -> dbCnx -> prepare("DELETE FROM categorias WHERE categoria_id = ?");
+                    $stm -> execute([$this->id]);
+                    return $stm -> fetchAll();
+                    echo "<script>alert('CATEGORIA ELIMINADA');document.location='categoria.php'</script>";
+                } catch (Exception $e) {
+                    return $e -> getMessage();
+                }
+            }
 }
 
 
