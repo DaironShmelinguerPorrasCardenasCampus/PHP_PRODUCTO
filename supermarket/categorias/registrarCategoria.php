@@ -1,9 +1,9 @@
 <?php
 
 if(isset($_POST['guardarCategoria'])){
- require_once("config.php");    
+ require_once("configCategory.php");    
 
- $config = new Config();
+ $config = new Category();
  $config-> setNombre($_POST['nombre']);
  $config-> setDescripcion($_POST['descripcion']);
  $config-> setImagen($_POST['imagen']);

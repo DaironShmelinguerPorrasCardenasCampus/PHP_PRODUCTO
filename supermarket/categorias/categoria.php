@@ -1,3 +1,13 @@
+<?php
+require_once("configCategory.php");
+$data = new Category();
+$allCategory = $data->obtenerCategory();
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -14,7 +24,7 @@
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
 
-  <link rel="stylesheet" type="text/css" href="Producto/css/productos.css">
+  <link rel="stylesheet" type="text/css" href="../css/supermarket.css">
 
 </head>
 
@@ -25,14 +35,14 @@
 
       <div class="perfil">
         <h3 style="margin-bottom: 2rem;">TIENDA VIRTUAL</h3>
-        <img src="marca.png" alt="" class="imagenPerfil">
+        <img src="../css/marca.png" alt="" class="imagenPerfil">
       </div>
       <div class="menus">
         <a href="/Home/home.php" style="display: flex;gap:2px;">
           <i class="bi bi-house-door"> </i>
           <h3 style="margin: 0px;">Home</h3>
         </a>
-        <a href="estudiantes.php" style="display: flex;gap:1px;">
+        <a href="#" style="display: flex;gap:1px;">
           <i class="bi bi-people"></i>
           <h3 style="margin: 0px;font-weight: 800;">Categorias</h3>
         </a>
@@ -45,7 +55,7 @@
     <div class="parte-media">
       <div style="display: flex; justify-content: space-between;">
         <h2>PRODUCTOS</h2>
-        <button class="btn-m" data-bs-toggle="modal" data-bs-target="#registrarEstudiantes"><i class="bi bi-person-add " style="color: rgb(255, 255, 255);" ></i></button>
+        <button class="btn-m" data-bs-toggle="modal" data-bs-target="#registrarCategoria"><i class="bi bi-person-add " style="color: rgb(255, 255, 255);" ></i></button>
       </div>
       <div class="menuTabla contenedor2">
         <table class="table table-custom ">
@@ -55,7 +65,6 @@
               <th scope="col">NOMBRE</th>
               <th scope="col">DESCRIPCIÓN</th>
               <th scope="col">IMAGEN</th>
-              <th scope="col">DETALLE</th>
               <th scope="col">ELIMINAR</th>
               <th scope="col">ACTUALIZAR</th>
             </tr>
@@ -64,10 +73,22 @@
 
             <!-- ///////Llenado DInamico desde la Base de Datos -->
          
-       
+            <?php
+            foreach ($allCategory as $key => $val) {
+            ?>
+            <tr>
+              <td> <?php echo $val['categoria_id']?></td>
+              <td> <?php echo $val['nombre']?></td>
+              <td> <?php echo $val['descripcion']?></td>
+              <td><img src="<?php echo $val['imagen']?>" alt="..." width="80px" ></td>
+              <td> <a  class="btn btn-danger" href="">BORRAR </a></td>
+              <td> <a  class="btn btn-primary" href="">MODIFICAR </a></td>
+            </tr>
 
           </tbody>
-        
+        <?php
+        }    
+        ?>
         </table>
 
       </div>
@@ -80,7 +101,7 @@
 
 
     <!-- /////////Modal de registro de nuevo estuiante //////////-->
-    <div class="modal fade" id="registrarEstudiantes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="backdrop-filter: blur(5px)">
+    <div class="modal fade" id="registrarCategoria" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="backdrop-filter: blur(5px)">
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
         <div class="modal-content" >
           <div class="modal-header" >
@@ -88,7 +109,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body" style="background-color: rgb(231, 253, 246);">
-            <form class="col d-flex flex-wrap" method="post">
+            <form class="col d-flex flex-wrap" action="registrarCategoria.php" method="post">
               <div class="mb-1 col-12">
                 <label for="nombre" class="form-label">NOMBRE DEL PRODUCTO</label>
                 <input 
@@ -119,20 +140,9 @@
                  
                 />
               </div>
-              <div class="mb-1 col-12">
-                <label for="detalle" class="form-label">DETALLE</label>
-                <input 
-                  type="text"
-                  id="detalle"
-                  name="detalle"
-                  class="form-control"  
-                />
-              </div>
-
-          
 
               <div class=" col-12 m-2">
-                <input type="submit" class="btn btn-primary" value="guardar" name="guardar"/>
+                <input type="submit" class="btn btn-primary" value="ADD CATEGORIA" name="guardarCategoria"/>
               </div>
             </form>  
          </div>       

@@ -62,5 +62,5 @@ CREATE TABLE proveedores(
 proveedor_id INT PRIMARY KEY NOT NULL,
 nombre VARCHAR(60) NOT NULL,
 telefono INT(50) NOT NULL,
-ciudad VARCHAR(60) NOT
+ciudad VARCHAR(60) NOT NULL
 )
