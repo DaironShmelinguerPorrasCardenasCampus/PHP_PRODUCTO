@@ -69,7 +69,7 @@ class Category extends Conexion{
 
             }
 
-            public function deleteCategory(){
+    public function deleteCategory(){
                 try {
                     $stm = $this -> dbCnx -> prepare("DELETE FROM categorias WHERE categoria_id = ?");
                     $stm -> execute([$this->id]);
@@ -79,6 +79,26 @@ class Category extends Conexion{
                     return $e -> getMessage();
                 }
             }
+     //ACTUALIZAR PARTE 1 - AQUÍ ES DONDE TRAEMOS LOS DATOS A LA PÁGITA EDITARESTUDIANTES.PHP
+     public function selectOne(){
+        try {
+            $stm = $this -> dbCnx -> prepare("SELECT * FROM categorias WHERE categoria_id = ?");
+            $stm-> execute([$this->id]);
+            return $stm-> fetchAll();
+        } catch (Exception $e) {
+            return $e->getMessage();
+        }
+    }
+
+    //ACTUALIZAR PARTE 2 - AQUÍ ACTUALIZAMOS ESOS DATOS EN LA DATABASE
+    public function update(){
+        try {
+            $stm = $this -> dbCnx -> prepare("UPDATE categorias SET nombre = ? , descripcion = ?, imagen = ?   WHERE categoria_id = ?");
+            $stm-> execute([$this->nombre,$this->descripcion,$this->imagen,$this->id]);
+        } catch (Exception $e) {
+            return $e->getMessage();
+        }
+    }
 }
 
 
