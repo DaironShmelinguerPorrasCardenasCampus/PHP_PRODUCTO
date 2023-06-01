@@ -73,7 +73,7 @@
               <i class="bi bi-people"></i>
               <h3 style="margin: 0px;font-weight: 800;">Clientes</h3>
             </a>
-            <a href="../empleados/empleados.php" style="display: flex;gap:1px;">
+            <a href="../Empleados/empleado.php" style="display: flex;gap:1px;">
               <i class="bi bi-people"></i>
               <h3 style="margin: 0px;font-weight: 800;">Empleados</h3>
             </a>
