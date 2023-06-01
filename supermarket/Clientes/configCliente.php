@@ -87,7 +87,7 @@ class Cliente extends Conexion{
     public function update(){
         try {
             $stm = $this -> dbCnx -> prepare("UPDATE clientes SET cliente_celular = ? , cliente_compa = ?  WHERE cliente_id = ?");
-            $stm-> execute([$this->cliente_celular,$this->cliente_compa,$this->cliente_id]);
+            $stm-> execute([$this->cliente_celular,$this->cliente_compa,$this->id]);
         } catch (Exception $e) {
             return $e->getMessage();
         }
