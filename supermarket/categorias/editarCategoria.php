@@ -55,8 +55,8 @@
       <div class="parte-izquierda">
 
         <div class="perfil">
-          <h3 style="margin-bottom: 2rem;">Categorias</h3>
-          <img src="../css/shopping-basket.png" alt="categorias" class="imagenPerfil">
+          <h3 style="margin-bottom: 2rem;"><pre>C A T E G O R I A S</pre></h3>
+          <img src="../css/carrito-de-compras.png" alt="categorias" class="imagenPerfil">
         
         </div>
         <div class="menus">
@@ -69,7 +69,7 @@
               <i class="bi bi-people"></i>
               <h3 style="margin: 0px;font-weight: 800;">Categorías</h3>
             </a>
-            <a href="../clientes/clientes.php" style="display: flex;gap:1px;">
+            <a href="../Clientes/cliente.php" style="display: flex;gap:1px;">
               <i class="bi bi-people"></i>
               <h3 style="margin: 0px;font-weight: 800;">Clientes</h3>
             </a>
