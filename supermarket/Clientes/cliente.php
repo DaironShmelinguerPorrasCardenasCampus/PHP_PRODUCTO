@@ -104,6 +104,7 @@ $allCliente = $data-> obtenerCliente();
               <td> <?php echo $val['cliente_celular']?></td>
               <td> <?php echo $val['cliente_compa']?></td>
               <td> <a  class="btn btn-danger" href="borrasCliente.php?cliente_id=<?= $val['cliente_id']?>&&req=delete">BORRAR </a></td>
+              <td> <a  class="btn btn-primary" href="editarCliente.php?cliente_id=<?=$val['cliente_id']?>">MODIFICAR </a></td>
              
             </tr>
 
