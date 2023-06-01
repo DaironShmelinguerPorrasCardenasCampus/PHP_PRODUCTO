@@ -1,4 +1,8 @@
 <?php
+
+  
+
+
    require_once("configCategory.php");
    $data = new Category();
 
@@ -9,9 +13,11 @@
   
 
     $val = $record[0]; //capturamos al array
-
+    
 
     if(isset($_POST['editar'])){//si via post name=editar linea 101
+
+
         $data-> setNombre($_POST['nombre']);
         $data-> setDescripcion($_POST['descripcion']);
         $data-> setImagen($_POST['imagen']);
@@ -43,117 +49,116 @@
 
 </head>
 
-<body>
-  <div class="contenedor">
+  <body>
+    <div class="contenedor">
 
-    <div class="parte-izquierda">
+      <div class="parte-izquierda">
 
-      <div class="perfil">
-        <h3 style="margin-bottom: 2rem;">Categorias</h3>
-        <img src="../css/shopping-basket.png" alt="categirias" class="imagenPerfil">
-       
-      </div>
-      <div class="menus">
+        <div class="perfil">
+          <h3 style="margin-bottom: 2rem;">Categorias</h3>
+          <img src="../css/shopping-basket.png" alt="categorias" class="imagenPerfil">
         
-        <a href="../home/home.php" style="display: flex;gap:2px;">
-            <i class="bi bi-house-door"> </i>
-            <h3 style="margin: 0px;">Home</h3>
-          </a>
-          <a href="../categorias/categoria.php" style="display: flex;gap:1px;">
-            <i class="bi bi-people"></i>
-            <h3 style="margin: 0px;font-weight: 800;">Categorías</h3>
-          </a>
-          <a href="../clientes/clientes.php" style="display: flex;gap:1px;">
-            <i class="bi bi-people"></i>
-            <h3 style="margin: 0px;font-weight: 800;">Clientes</h3>
-          </a>
-          <a href="../empleados/empleados.php" style="display: flex;gap:1px;">
-            <i class="bi bi-people"></i>
-            <h3 style="margin: 0px;font-weight: 800;">Empleados</h3>
-          </a>
-          <a href="../proveedores/proveedores.php" style="display: flex;gap:1px;">
-            <i class="bi bi-people"></i>
-            <h3 style="margin: 0px;font-weight: 800;">Proveedores</h3>
-          </a>
-          <a href="../productos/productos.php" style="display: flex;gap:1px;">
-            <i class="bi bi-people"></i>
-            <h3 style="margin: 0px;font-weight: 800;">Productos</h3>
-          </a>
-          <a href="../facturas/facturas.php" style="display: flex;gap:1px;">
-            <i class="bi bi-people"></i>
-            <h3 style="margin: 0px;font-weight: 800;">Facturas</h3>
-          </a>
-          <a href="../detailFactura/detailFactura.php" style="display: flex;gap:1px;">
-            <i class="bi bi-people"></i>
-            <h3 style="margin: 0px;font-weight: 800;">Factura Detalle</h3>
-          </a>
-       
+        </div>
+        <div class="menus">
+          
+          <a href="../home/home.php" style="display: flex;gap:2px;">
+              <i class="bi bi-house-door"> </i>
+              <h3 style="margin: 0px;">Home</h3>
+            </a>
+            <a href="../categorias/categoria.php" style="display: flex;gap:1px;">
+              <i class="bi bi-people"></i>
+              <h3 style="margin: 0px;font-weight: 800;">Categorías</h3>
+            </a>
+            <a href="../clientes/clientes.php" style="display: flex;gap:1px;">
+              <i class="bi bi-people"></i>
+              <h3 style="margin: 0px;font-weight: 800;">Clientes</h3>
+            </a>
+            <a href="../empleados/empleados.php" style="display: flex;gap:1px;">
+              <i class="bi bi-people"></i>
+              <h3 style="margin: 0px;font-weight: 800;">Empleados</h3>
+            </a>
+            <a href="../proveedores/proveedores.php" style="display: flex;gap:1px;">
+              <i class="bi bi-people"></i>
+              <h3 style="margin: 0px;font-weight: 800;">Proveedores</h3>
+            </a>
+            <a href="../productos/productos.php" style="display: flex;gap:1px;">
+              <i class="bi bi-people"></i>
+              <h3 style="margin: 0px;font-weight: 800;">Productos</h3>
+            </a>
+            <a href="../facturas/facturas.php" style="display: flex;gap:1px;">
+              <i class="bi bi-people"></i>
+              <h3 style="margin: 0px;font-weight: 800;">Facturas</h3>
+            </a>
+            <a href="../detailFactura/detailFactura.php" style="display: flex;gap:1px;">
+              <i class="bi bi-people"></i>
+              <h3 style="margin: 0px;font-weight: 800;">Factura Detalle</h3>
+            </a>
+        
+        </div>
       </div>
-    </div>
-    </div>
 
-    <div class="parte-media">
-        <h2 class="m-2">Modificar Categoria</h2>
-      <div class="menuTabla contenedor2">
-      <form class="col d-flex flex-wrap" action=""  method="post">
-              <div class="mb-1 col-12">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input 
-                  type="text"
-                  id="nombre"
-                  name="nombre"
-                  class="form-control" 
-                  value ="<?php echo $val['nombre'];?>" 
-                 
-                />
-              </div>
-
-              <div class="mb-1 col-12">
-                <label for="descripcion" class="form-label">Descripción</label>
-                <input 
-                  type="text"
-                  id="descripcion"
-                  name="descripcion"
-                  class="form-control"  
-                  value ="<?php echo $val['descripcion'];?>" 
-                 
-                />
-              </div>
-
-              <div class="mb-1 col-12">
-                <label for="imagen" class="form-label">Imagen</label>
-                <input 
-                  type="text"
-                  id="imagen"
-                  name="imagen"
-                  class="form-control"  
-                  value ="<?php echo $val['imagen'];?>" 
+      <div class="parte-media">
+          <h2 class="m-2">Modificar Categoria</h2>
+        <div class="menuTabla contenedor2">
+        <form class="col d-flex flex-wrap" action=""  method="post">
+                <div class="mb-1 col-12">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input 
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    class="form-control" 
+                    value ="<?php echo $val['nombre'];?>" 
                   
-                />
-              </div>
+                  />
+                </div>
 
-              
+                <div class="mb-1 col-12">
+                  <label for="descripcion" class="form-label">Descripción</label>
+                  <input 
+                    type="text"
+                    id="descripcion"
+                    name="descripcion"
+                    class="form-control"  
+                    value ="<?php echo $val['descripcion'];?>" 
+                  
+                  />
+                </div>
 
-              <div class=" col-12 m-2">
-                <input type="submit" class="btn btn-primary" value="UPDATE" name="editar"/>
-              </div>
-            </form>  
-        <div id="charts1" class="charts"> </div>
+                <div class="mb-1 col-12">
+                  <label for="imagen" class="form-label">Imagen</label>
+                  <input 
+                    type="text"
+                    id="imagen"
+                    name="imagen"
+                    class="form-control"  
+                    value ="<?php echo $val['imagen'];?>" 
+                    
+                  />
+                </div>
+
+                
+
+                <div class=" col-12 m-2">
+                  <input type="submit" class="btn btn-primary" value="UPDATE" name="editar"/>
+                </div>
+              </form>  
+          <div id="charts1" class="charts"> </div>
+        </div>
       </div>
+
+      </div>
+
     </div>
 
-   
 
-  </div>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>
 
 
 
 
-</body>
+  </body>
 
 </html>

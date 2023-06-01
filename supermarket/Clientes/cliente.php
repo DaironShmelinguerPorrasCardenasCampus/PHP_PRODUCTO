@@ -48,7 +48,7 @@ $allCliente = $data-> obtenerCliente();
           <i class="bi bi-people"></i>
           <h3 style="margin: 0px;font-weight: 800;">Categorias</h3>
         </a>
-        <a href="#" style="display: flex;gap:1px;">
+        <a href="../Clientes/cliente.php" style="display: flex;gap:1px;">
             <i class="bi bi-people"></i>
             <h3 style="margin: 0px;font-weight: 800;">Clientes</h3>
           </a>
@@ -103,7 +103,7 @@ $allCliente = $data-> obtenerCliente();
               <td> <?php echo $val['cliente_id']?></td>
               <td> <?php echo $val['cliente_celular']?></td>
               <td> <?php echo $val['cliente_compa']?></td>
-              <td> <a  class="btn btn-danger" href="borrarCliente.php?cliente_id=<?= $val['cliente_id']?>&&req=delete">BORRAR </a></td>
+              <td> <a  class="btn btn-danger" href="borrasCliente.php?cliente_id=<?= $val['cliente_id']?>&&req=delete">BORRAR </a></td>
              
             </tr>
 
@@ -132,6 +132,7 @@ $allCliente = $data-> obtenerCliente();
           </div>
           <div class="modal-body" style="background-color: rgb(231, 253, 246);">
             <form class="col d-flex flex-wrap" action="registrarCliente.php" method="post">
+
               <div class="mb-1 col-12">
                 <label for="celular" class="form-label">CELULAR</label>
                 <input 

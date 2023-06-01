@@ -96,7 +96,7 @@ class Category extends Conexion{
             $stm = $this -> dbCnx -> prepare("UPDATE categorias SET nombre = ? , descripcion = ?, imagen = ?   WHERE categoria_id = ?");
             $stm-> execute([$this->nombre,$this->descripcion,$this->imagen,$this->id]);
         } catch (Exception $e) {
-            return $e->getMessage();
+            echo $e->getMessage();
         }
     }
 }

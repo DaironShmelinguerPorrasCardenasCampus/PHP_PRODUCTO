@@ -44,10 +44,10 @@ class Cliente extends Conexion{
 
     public function insertCliente(){
         try {
-            $stm = $this-> dbCnx -> prepare("INSERT INTO clientes(cliente_celular,cliente_compa) VALUES(?,?)");
+            $stm = $this-> dbCnx -> prepare("INSERT INTO clientes(cliente_celular,cliente_compa) VALUE (?,?)");
             $stm -> execute([$this->cliente_celular, $this->cliente_compa]);
         } catch (Exception $e) {
-            return $e -> getMessage();
+            echo $e -> getMessage();
         }
     }
 
@@ -63,15 +63,15 @@ class Cliente extends Conexion{
             }
 
     public function deleteCliente(){
-                try {
-                    $stm = $this -> dbCnx -> prepare("DELETE FROM clientes WHERE cliente_id = ?");
-                    $stm -> execute([$this->id]);
-                    return $stm -> fetchAll();
-                    echo "<script>alert('CLIENTE ELIMINADO');document.location='cliente.php'</script>";
-                } catch (Exception $e) {
-                    return $e -> getMessage();
-                }
+            try {
+                $stm = $this -> dbCnx -> prepare("DELETE FROM clientes WHERE cliente_id = ?");
+                $stm -> execute([$this->id]);
+                return $stm -> fetchAll();
+                echo "<script>alert('CLIENTE ELIMINADO');document.location='cliente.php'</script>";
+            } catch (Exception $e) {
+                return $e -> getMessage();
             }
+        }
      
      public function selectOne(){
         try {
