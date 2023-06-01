@@ -54,14 +54,14 @@ $allCategory = $data->obtenerCategory();
 
     <div class="parte-media">
       <div style="display: flex; justify-content: space-between;">
-        <h2>PRODUCTOS</h2>
+        <h2>CATEGORIAS</h2>
         <button class="btn-m" data-bs-toggle="modal" data-bs-target="#registrarCategoria"><i class="bi bi-person-add " style="color: rgb(255, 255, 255);" ></i></button>
       </div>
       <div class="menuTabla contenedor2">
         <table class="table table-custom ">
           <thead>
             <tr>
-              <th scope="col">ID PRODUCTO</th>
+              <th scope="col">ID </th>
               <th scope="col">NOMBRE</th>
               <th scope="col">DESCRIPCIÓN</th>
               <th scope="col">IMAGEN</th>
@@ -82,7 +82,7 @@ $allCategory = $data->obtenerCategory();
               <td> <?php echo $val['descripcion']?></td>
               <td><img src="<?php echo $val['imagen']?>" alt="..." width="80px" ></td>
               <td> <a  class="btn btn-danger" href="borrarCategoria.php?categoria_id=<?= $val['categoria_id']?>&&req=delete">BORRAR </a></td>
-              <td> <a  class="btn btn-primary" href="">MODIFICAR </a></td>
+              <td> <a  class="btn btn-primary" href="editarCategoria.php?categoria_id=<?=$val['categoria_id']?>">MODIFICAR </a></td>
             </tr>
 
           </tbody>
@@ -111,7 +111,7 @@ $allCategory = $data->obtenerCategory();
           <div class="modal-body" style="background-color: rgb(231, 253, 246);">
             <form class="col d-flex flex-wrap" action="registrarCategoria.php" method="post">
               <div class="mb-1 col-12">
-                <label for="nombre" class="form-label">NOMBRE DEL PRODUCTO</label>
+                <label for="nombre" class="form-label">NOMBRE</label>
                 <input 
                   type="text"
                   id="nombre"
