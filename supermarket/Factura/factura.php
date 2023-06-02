@@ -1,5 +1,8 @@
 <?php
-require_once("ConfigFactura.php");
+ ini_set("display_errors", 1);
+ ini_set("display_startup_errors", 1);
+ error_reporting(E_ALL);
+require_once("configFactura.php");
 require_once("../Clientes/configCliente.php");
 require_once("../Empleados/configEmpleado.php");
 
@@ -11,6 +14,7 @@ $allCliente = $dataCliente -> obtenerCliente();
 
 $dataEmpleado = new Empleado();
 $allEmpleado = $dataEmpleado -> obtenerEmpleado();
+   
 
 
 ?>
