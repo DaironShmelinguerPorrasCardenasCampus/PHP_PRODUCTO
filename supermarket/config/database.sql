@@ -26,11 +26,11 @@ imagen_empleado VARCHAR(250) NOT NULL
 
 CREATE TABLE facturas(
 factura_id INT PRIMARY KEY AUTO_INCREMENT,
-empleado_id INT,
-cliente_id INT,
+fac_empleado_id INT,
+fac_cliente_id INT,
 fecha DATETIME,
-Foreign Key (empleado_id) REFERENCES empleados(empleado_id),
-Foreign Key (cliente_id) REFERENCES clientes(cliente_id)
+Foreign Key (fac_empleado_id) REFERENCES empleados(empleado_id),
+Foreign Key (fac_cliente_id) REFERENCES clientes(cliente_id)
 
 );
 
