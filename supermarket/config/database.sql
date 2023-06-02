@@ -53,7 +53,7 @@ pro_proveedor_id INT,
 nombre_producto VARCHAR(50) NOT NULL,
 descontinuado ENUM("Si","No") NOT NULL,
 Foreign Key (pro_categoria_id) REFERENCES categorias(categoria_id),
-Foreign Key (oro_proveedor_id) REFERENCES proveedores(proveedor_id)
+Foreign Key (pro_proveedor_id) REFERENCES proveedores(proveedor_id)
 
 
 
