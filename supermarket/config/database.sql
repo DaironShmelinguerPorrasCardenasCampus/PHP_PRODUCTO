@@ -45,15 +45,15 @@ Foreign Key (producto_id) REFERENCES productos(producto_id)
 
 CREATE TABLE productos(
 producto_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-categoria_id INT,
+pro_categoria_id INT,
 precio_unitario FLOAT(50) NOT NULL,
 stock INT(60) NOT NULL,
 unidades_pedidas INT (60) NOT NULL,
-proveedor_id INT, 
+pro_proveedor_id INT, 
 nombre_producto VARCHAR(50) NOT NULL,
 descontinuado ENUM("Si","No") NOT NULL,
-Foreign Key (categoria_id) REFERENCES categorias(categoria_id),
-Foreign Key (proveedor_id) REFERENCES proveedores(proveedor_id)
+Foreign Key (pro_categoria_id) REFERENCES categorias(categoria_id),
+Foreign Key (oro_proveedor_id) REFERENCES proveedores(proveedor_id)
 
 
 
