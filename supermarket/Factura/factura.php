@@ -49,8 +49,8 @@ $allEmpleado = $dataEmpleado -> obtenerEmpleado();
     <div class="parte-izquierda">
 
       <div class="perfil">
-        <h3 style="margin-bottom: 2rem;"><pre>F A C T U R A</pre></h3>
-        <img src="../css/marca.png" alt="" class="imagenPerfil">
+        <h3 style="margin-bottom: 2rem;">Laika</h3>
+        <img src="../css/perro-globo.png" alt="" class="imagenPerfil">
         
       </div>
       <div class="menus">
@@ -78,7 +78,7 @@ $allEmpleado = $dataEmpleado -> obtenerEmpleado();
             <i class="bi bi-people"></i>
             <h3 style="margin: 0px;font-weight: 800;">Productos</h3>
           </a>
-          <a href="../Facturas/factura.php" style="display: flex;gap:1px;">
+          <a href="../Factura/factura.php" style="display: flex;gap:1px;">
             <i class="bi bi-people"></i>
             <h3 style="margin: 0px;font-weight: 800;">Facturas</h3>
           </a>
@@ -93,7 +93,7 @@ $allEmpleado = $dataEmpleado -> obtenerEmpleado();
 
     <div class="parte-media">
       <div style="display: flex; justify-content: space-between;">
-        <h2>Facturas</h2>
+        <h2>FACTURAS</h2>
         <button class="btn-m" data-bs-toggle="modal" data-bs-target="#registrarFactura"><i class="bi bi-person-add " style="color: rgb(255, 255, 255);" ></i></button>
       </div>
       <div class="menuTabla contenedor2">

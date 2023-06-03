@@ -55,8 +55,8 @@
       <div class="parte-izquierda">
 
         <div class="perfil">
-          <h3 style="margin-bottom: 2rem;"><pre>C A T E G O R I A S</pre></h3>
-          <img src="../css/carrito-de-compras.png" alt="categorias" class="imagenPerfil">
+          <h3 style="margin-bottom: 2rem;">Categorias</h3>
+          <img src="../css/categorias.png" alt="categorias" class="imagenPerfil">
         
         </div>
         <div class="menus">
@@ -98,7 +98,7 @@
       </div>
 
       <div class="parte-media">
-          <h2 class="m-2">Modificar Categoria</h2>
+          <h2 class="m-2">MODIFICAR CATEGORIA</h2>
         <div class="menuTabla contenedor2">
         <form class="col d-flex flex-wrap" action=""  method="post">
                 <div class="mb-1 col-12">

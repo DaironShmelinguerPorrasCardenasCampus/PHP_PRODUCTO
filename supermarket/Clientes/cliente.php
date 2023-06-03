@@ -36,8 +36,8 @@ $allCliente = $data-> obtenerCliente();
     <div class="parte-izquierda">
 
       <div class="perfil">
-        <h3 style="margin-bottom: 2rem;">TIENDA VIRTUAL</h3>
-        <img src="../css/marca.png" alt="" class="imagenPerfil">
+        <h3 style="margin-bottom: 2rem;">Laika</h3>
+        <img src="../css/perro-globo.png" alt="" class="imagenPerfil">
       </div>
       <div class="menus">
         <a href="/Home/home.php" style="display: flex;gap:2px;">
@@ -120,7 +120,12 @@ $allCliente = $data-> obtenerCliente();
     </div>
 
 
+    <div class="parte-derecho " id="detalles">
+      <h3>Detalle</h3>
+      <p>Cargando...</p>
+       <!-- ///////Generando la grafica -->
 
+    </div>
 
 
     <!-- /////////Modal de registro de nuevo estuiante //////////-->

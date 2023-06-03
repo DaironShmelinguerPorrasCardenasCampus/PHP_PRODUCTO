@@ -49,8 +49,8 @@ $allProveedor= $dataProveedor -> obtenerProveedor();
     <div class="parte-izquierda">
 
       <div class="perfil">
-        <h3 style="margin-bottom: 2rem;"><pre>P R O D U C T O S</pre></h3>
-        <img src="../css/marca.png" alt="" class="imagenPerfil">
+        <h3 style="margin-bottom: 2rem;">Laika</h3>
+        <img src="../css/perro-globo.png" alt="" class="imagenPerfil">
         
       </div>
       <div class="menus">
@@ -78,7 +78,7 @@ $allProveedor= $dataProveedor -> obtenerProveedor();
             <i class="bi bi-people"></i>
             <h3 style="margin: 0px;font-weight: 800;">Productos</h3>
           </a>
-          <a href="../Facturas/factura.php" style="display: flex;gap:1px;">
+          <a href="../Factura/factura.php" style="display: flex;gap:1px;">
             <i class="bi bi-people"></i>
             <h3 style="margin: 0px;font-weight: 800;">Facturas</h3>
           </a>
@@ -131,6 +131,7 @@ $allProveedor= $dataProveedor -> obtenerProveedor();
               <td><?=$producto['descontinuado'];?></td>
               <td><?=$producto['stock_disponible'];?></td>
               <td><a class="btn btn-danger" href="borrarProducto.php?producto_id=<?=$producto['producto_id']?>&&req=delete">Borrar</a></td>
+              <td> <a  class="btn btn-primary" href="editarProducto.php?producto_id=<?=$producto['producto_id']?>">MODIFICAR </a></td>
             </tr>
 
             <?php
@@ -148,7 +149,12 @@ $allProveedor= $dataProveedor -> obtenerProveedor();
     </div>
 
   
+    <div class="parte-derecho " id="detalles">
+      <h3>Detalle</h3>
+      <p>Cargando...</p>
+       <!-- ///////Generando la grafica -->
 
+    </div>
 
 
     <!-- /////////Modal de registro de nuevo estuiante //////////-->

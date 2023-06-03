@@ -15,7 +15,7 @@ $allCategory = $data->obtenerCategory();
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página </title>
+  <title>Categorias </title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
@@ -34,8 +34,8 @@ $allCategory = $data->obtenerCategory();
     <div class="parte-izquierda">
 
       <div class="perfil">
-        <h3 style="margin-bottom: 2rem;">TIENDA VIRTUAL</h3>
-        <img src="../css/marca.png" alt="" class="imagenPerfil">
+        <h3 style="margin-bottom: 2rem;">Laika</h3>
+        <img src="../css/perro-globo.png" alt="" class="imagenPerfil">
       </div>
       <div class="menus">
         <a href="/Home/home.php" style="display: flex;gap:2px;">
@@ -58,7 +58,7 @@ $allCategory = $data->obtenerCategory();
             <i class="bi bi-people"></i>
             <h3 style="margin: 0px;font-weight: 800;">Proveedores</h3>
           </a>
-          <a href="../productos/productos.php" style="display: flex;gap:1px;">
+          <a href="../Producto/producto.php" style="display: flex;gap:1px;">
             <i class="bi bi-people"></i>
             <h3 style="margin: 0px;font-weight: 800;">Productos</h3>
           </a>
@@ -120,7 +120,12 @@ $allCategory = $data->obtenerCategory();
     </div>
 
 
+    <div class="parte-derecho " id="detalles">
+      <h3>Detalle</h3>
+      <p>Cargando...</p>
+       <!-- ///////Generando la grafica -->
 
+    </div>
 
 
     <!-- /////////Modal de registro de nuevo estuiante //////////-->

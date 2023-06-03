@@ -125,7 +125,7 @@ class Producto extends Conexion{
      
      public function selectOne(){
         try {
-            $stm = $this -> dbCnx -> prepare("SELECT * FROM empleados WHERE empleado_id = ?");
+            $stm = $this -> dbCnx -> prepare("SELECT * FROM productos WHERE producto_id = ?");
             $stm-> execute([$this->id]);
             return $stm-> fetchAll();
         } catch (Exception $e) {
@@ -136,8 +136,8 @@ class Producto extends Conexion{
 
     public function update(){
         try {
-            $stm = $this -> dbCnx -> prepare("UPDATE empleados SET nombre_empleado= ?,celular_empleado= ?,direccion_empleado = ?,imagen_empleado = ? WHERE empleado_id = ?");
-            $stm-> execute([$this->nom_emple,$this->cel_emple,$this->dir_emple,$this->img_emple,$this->id]);
+            $stm = $this -> dbCnx -> prepare("UPDATE productos SET pro_categoria_id = ?,precio_unitario=?,stock=?,unidades_pedidas=?,pro_proveedor_id=?,nombre_producto=?,descontinuado=? WHERE producto_id = ?");
+            $stm-> execute([$this->categoriaId, $this->precio, $this->stock, $this->Unidad_pedida, $this->proveedorId, $this->nombre, $this->descontinuado,$this->id]);
         } catch (Exception $e) {
             return $e->getMessage();
         }

@@ -31,7 +31,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Actualizar Empleado</title>
+  <title>Actualizar Proveedor</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
@@ -50,8 +50,8 @@
       <div class="parte-izquierda">
 
         <div class="perfil">
-          <h3 style="margin-bottom: 2rem;"><pre>P R O V E E D O R E S</pre></h3>
-          <img src="../css/empresario.png" alt="categorias" class="imagenPerfil">
+          <h3 style="margin-bottom: 2rem;">Proveedores</h3>
+          <img src="../css/proveedor.png" alt="categorias" class="imagenPerfil">
         
         </div>
         <div class="menus">
@@ -93,7 +93,7 @@
       </div>
 
       <div class="parte-media">
-          <h2 class="m-2">Modificar Proveedor</h2>
+          <h2 class="m-2">MODIFICAR PROVEEDOR</h2>
         <div class="menuTabla contenedor2">
         <form class="col d-flex flex-wrap" action=""  method="post">
                 <div class="mb-1 col-12">

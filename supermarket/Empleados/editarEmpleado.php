@@ -54,8 +54,8 @@
       <div class="parte-izquierda">
 
         <div class="perfil">
-          <h3 style="margin-bottom: 2rem;"><pre>E M P L E A D O S</pre></h3>
-          <img src="../css/empresario.png" alt="categorias" class="imagenPerfil">
+          <h3 style="margin-bottom: 2rem;">Empleados</h3>
+          <img src="../css/empleado.png" alt="categorias" class="imagenPerfil">
         
         </div>
         <div class="menus">
@@ -80,7 +80,7 @@
               <i class="bi bi-people"></i>
               <h3 style="margin: 0px;font-weight: 800;">Proveedores</h3>
             </a>
-            <a href="../productos/productos.php" style="display: flex;gap:1px;">
+            <a href="../Producto/producto.php" style="display: flex;gap:1px;">
               <i class="bi bi-people"></i>
               <h3 style="margin: 0px;font-weight: 800;">Productos</h3>
             </a>
@@ -97,7 +97,7 @@
       </div>
 
       <div class="parte-media">
-          <h2 class="m-2">Modificar Empleado</h2>
+          <h2 class="m-2">MODIFICAR EMPLEADO</h2>
         <div class="menuTabla contenedor2">
         <form class="col d-flex flex-wrap" action=""  method="post">
                 <div class="mb-1 col-12">
@@ -131,7 +131,7 @@
                     id="direccion"
                     name="direccion"
                     class="form-control"  
-                    value ="<?php echo $val['celular_empleado'];?>" 
+                    value ="<?php echo $val['direccion_empleado'];?>" 
                   
                   />
                 </div>

@@ -22,18 +22,18 @@ body{
     
   
     .parte-media {
-      background-color: #faeded;
+      background-color:#ffeaff ;
       width: 60%;
       padding: 20px;
       border-radius: 10px;
-      border-right: 2px solid rgb(255, 255, 255);
+      border-right: 2px solid #e1d9ee;
       overflow-x: auto;
      
   
     }
     
     .parte-derecho {
-      background-color: #fff9f9;
+      background-color:#e6c7ff ;
       width: 25%;
       padding: 20px;
       border-radius: 10px;
@@ -44,7 +44,7 @@ body{
     
     }
     .imagenPerfil{
-      border-radius: 100%;
+     
       width: 60%;
       height: 70%;
      
@@ -94,9 +94,9 @@ body{
     }
     
      .menus a:hover{
-      background-color:rgb(74, 74, 97);
+      background-color:#b29ee9;
       padding: 5px;
-      color: #fff9f9;
+      color: white;
       margin: 5px;
       font-weight: 800;
    
@@ -118,7 +118,7 @@ body{
   
     .cards{
      
-      background-color: rgb(224, 250, 250);
+      background-color: rgb(219, 196, 234);
       
       
       
@@ -127,7 +127,7 @@ body{
     }
   
     .cards:hover{
-      background-color: rgb(189, 248, 248);
+      background-color: rgb(190, 146, 212);
   
     }
   
@@ -180,7 +180,7 @@ body{
       width: 150px;
       height: 40px;
       object-fit: cover;
-      background-color: rgb(255, 123, 0);
+      background-color:#d183ff;
       text-decoration: none;
       
       border-radius: 10PX;
@@ -208,14 +208,14 @@ body{
   }
   
   .table-custom tbody tr {
-    background-color: #f0f0f0; 
+    background-color:#ffeaff ; 
     border-radius: 15px; 
     
   }
   
   /* ////////////////////////////   STYLOS PARTE IZQUIERADA //////////////////////////////// */
   .parte-izquierda {
-    background-color: #faeded;
+    background-color:#ffeaff;
     width: 15%;
     border-right: 2px solid rgb(255, 255, 255);
     padding: 20px;
