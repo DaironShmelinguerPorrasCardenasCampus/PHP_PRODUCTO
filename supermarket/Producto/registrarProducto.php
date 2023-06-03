@@ -4,16 +4,20 @@
   
   error_reporting(E_ALL);  
 
-if(isset($_POST['guardarFactura'])){
+if(isset($_POST['guardarProducto'])){
  require_once("configProducto.php");    
 
  $config = new Producto();
- $config-> setEmpleadoId($_POST['empleado']);
- $config-> setClienteId($_POST['cliente']);
- $config-> setFacturaFecha($_POST['fecha']);
- $config-> insertFactura();
+ $config-> setCategoriaId($_POST['categoria']);
+ $config-> setProductoPrecio($_POST['precio']);
+ $config-> setProductoStock($_POST['stock']);
+ $config-> setProductoUnidad($_POST['pedido']);
+ $config-> setProveedorId($_POST['proveedor']);
+ $config-> setProductoNombre($_POST['nombre']);
+ $config-> setProDescontinuado($_POST['descontinuado']);
+ $config-> insertProducto();
 
- echo "<script> alert('EMPLEADO INSERTADO CORRECTAMENTE');document.location ='factura.php'</script>";
+ echo "<script> alert('EMPLEADO INSERTADO CORRECTAMENTE');document.location ='producto.php'</script>";
 
 }
 
