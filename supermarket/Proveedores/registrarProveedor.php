@@ -12,7 +12,7 @@ if(isset($_POST['guardarProveedor'])){
  $config-> setProveedorCel($_POST['celular']);
  $config-> setProveedorCity($_POST['ciudad']);
  $config-> insertProveedor();
- echo "<script> alert('EMPLEADO INSERTADO CORRECTAMENTE');document.location ='proveedor.php'</script>";
+ echo "<script> alert('PROVEEDOR INSERTADO CORRECTAMENTE');document.location ='proveedor.php'</script>";
 
 }
 

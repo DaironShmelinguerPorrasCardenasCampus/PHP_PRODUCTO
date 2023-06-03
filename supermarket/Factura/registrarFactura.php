@@ -13,7 +13,7 @@ if(isset($_POST['guardarFactura'])){
  $config-> setFacturaFecha($_POST['fecha']);
  $config-> insertFactura();
 
- echo "<script> alert('EMPLEADO INSERTADO CORRECTAMENTE');document.location ='factura.php'</script>";
+ echo "<script> alert('FACTURA INSERTADA CORRECTAMENTE');document.location ='factura.php'</script>";
 
 }
 

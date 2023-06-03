@@ -13,7 +13,7 @@ if(isset($_POST['guardarCliente'])){
  $config-> setClienteCompa($_POST['compañia']);
  $config-> insertCliente();
 
- echo "<script> alert('CATEGORIA INSERTADA CORRECTAMENTE');document.location ='cliente.php'</script>";
+ echo "<script> alert('CLIENTE INSERTADO CORRECTAMENTE');document.location ='cliente.php'</script>";
 
 }
 

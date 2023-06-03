@@ -85,7 +85,7 @@ class Empleado extends Conexion{
                 $stm = $this -> dbCnx -> prepare("DELETE FROM empleados WHERE empleado_id = ?");
                 $stm -> execute([$this->id]);
                 return $stm -> fetchAll();
-                echo "<script>alert('CLIENTE ELIMINADO');document.location='empleado.php'</script>";
+                echo "<script>alert('EMPLEADO ELIMINADO');document.location='empleado.php'</script>";
             } catch (Exception $e) {
                 return $e -> getMessage();
             }

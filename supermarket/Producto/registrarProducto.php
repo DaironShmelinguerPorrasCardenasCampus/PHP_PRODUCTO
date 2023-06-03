@@ -17,7 +17,7 @@ if(isset($_POST['guardarProducto'])){
  $config-> setProDescontinuado($_POST['descontinuado']);
  $config-> insertProducto();
 
- echo "<script> alert('EMPLEADO INSERTADO CORRECTAMENTE');document.location ='producto.php'</script>";
+ echo "<script> alert('PRODUCTO INSERTADO CORRECTAMENTE');document.location ='producto.php'</script>";
 
 }
 
