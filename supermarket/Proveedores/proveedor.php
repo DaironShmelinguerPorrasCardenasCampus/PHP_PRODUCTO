@@ -61,7 +61,7 @@ $data = new Proveedor();
             <i class="bi bi-people"></i>
             <h3 style="margin: 0px;font-weight: 800;">Proveedores</h3>
           </a>
-          <a href="../productos/productos.php" style="display: flex;gap:1px;">
+          <a href="../Producto/producto.php" style="display: flex;gap:1px;">
             <i class="bi bi-people"></i>
             <h3 style="margin: 0px;font-weight: 800;">Productos</h3>
           </a>

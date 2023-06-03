@@ -93,7 +93,7 @@ $allProveedor= $dataProveedor -> obtenerProveedor();
 
     <div class="parte-media">
       <div style="display: flex; justify-content: space-between;">
-        <h2>Facturas</h2>
+        <h2>PRODUCTOS</h2>
         <button class="btn-m" data-bs-toggle="modal" data-bs-target="#registrarProducto"><i class="bi bi-person-add " style="color: rgb(255, 255, 255);" ></i></button>
       </div>
       <div class="menuTabla contenedor2">
@@ -147,14 +147,7 @@ $allProveedor= $dataProveedor -> obtenerProveedor();
 
     </div>
 
-    <div class="parte-derecho " id="detalles">
-      <h3>Detalle</h3>
-      <p>Cargando...</p>
-       <!-- ///////Generando la grafica -->
-
-    </div>
-
-
+  
 
 
 
@@ -170,7 +163,7 @@ $allProveedor= $dataProveedor -> obtenerProveedor();
 
             <form class="col d-flex flex-wrap" action="registrarProducto.php" method="post">
               <div class="mb-1 col-12">
-                <label for="categoria" class="form-label">Categoria</label>
+                <label for="categoria" class="form-label">CATEGORIA</label>
 
                 <select class="form-control" name="categoria" id="categoria" required>
                 <option value="select">Seleccione la categoria</option>
