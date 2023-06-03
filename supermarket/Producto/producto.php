@@ -130,7 +130,7 @@ $allProveedor= $dataProveedor -> obtenerProveedor();
               <td><?=$producto['nombre_producto'];?></td>
               <td><?=$producto['descontinuado'];?></td>
               <td><?=$producto['stock_disponible'];?></td>
-              <td><a class="btn btn-danger" href="borrarFactura.php?factura_id=<?=$factura['factura_id']?>&&req=delete">Borrar</a></td>
+              <td><a class="btn btn-danger" href="borrarProducto.php?producto_id=<?=$producto['producto_id']?>&&req=delete">Borrar</a></td>
             </tr>
 
             <?php

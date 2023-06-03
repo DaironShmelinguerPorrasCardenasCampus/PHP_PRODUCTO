@@ -112,12 +112,12 @@ class Producto extends Conexion{
 
             
 
-    public function deleteEmpleado(){
+    public function deleteProducto(){
             try {
-                $stm = $this -> dbCnx -> prepare("DELETE FROM empleados WHERE empleado_id = ?");
+                $stm = $this -> dbCnx -> prepare("DELETE FROM productos WHERE producto_id = ?");
                 $stm -> execute([$this->id]);
                 return $stm -> fetchAll();
-                echo "<script>alert('CLIENTE ELIMINADO');document.location='empleado.php'</script>";
+                echo "<script>alert('PRODUCTO ELIMINADO');document.location='producto.php'</script>";
             } catch (Exception $e) {
                 return $e -> getMessage();
             }
