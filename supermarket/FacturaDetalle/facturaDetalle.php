@@ -1,9 +1,24 @@
 <?php
-require_once("configCategory.php");
-$data = new Category();
-$allCategory = $data->obtenerCategory();
+ ini_set("display_errors", 1);
+ ini_set("display_startup_errors", 1);
+ error_reporting(E_ALL);
+require_once("configFacDetalle.php");
+require_once("../Producto/configProducto.php");
+require_once("../Factura/configFactura.php");
+
+$dataFacturaD = new Detalle();
+$allFacturaD = $dataFacturaD -> obtenerFacturaDetalleInner();
+
+$dataProducto = new Producto();
+$allProducto = $dataProducto -> obtenerProductoInner();
+
+$dataFactura = new Factura();
+$allFactura = $dataFactura -> obtenerFacturaInner();
+   
+
 
 ?>
+
 
 
 
@@ -15,7 +30,7 @@ $allCategory = $data->obtenerCategory();
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Categorias </title>
+  <title>Facturas</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
@@ -36,6 +51,7 @@ $allCategory = $data->obtenerCategory();
       <div class="perfil">
         <h3 style="margin-bottom: 2rem;">Laika</h3>
         <img src="../css/perro-globo.png" alt="" class="imagenPerfil">
+        
       </div>
       <div class="menus">
         <a href="/Home/home.php" style="display: flex;gap:2px;">
@@ -73,52 +89,54 @@ $allCategory = $data->obtenerCategory();
 
 
       </div>
-    </div>
+</div>
 
     <div class="parte-media">
       <div style="display: flex; justify-content: space-between;">
-        <h2>CATEGORIAS</h2>
-        <button class="btn-m" data-bs-toggle="modal" data-bs-target="#registrarCategoria"><i class="bi bi-person-add " style="color: rgb(255, 255, 255);" ></i></button>
+        <h2>FACTURAS</h2>
+        <button class="btn-m" data-bs-toggle="modal" data-bs-target="#registrarDetalle"><i class="bi bi-person-add " style="color: rgb(255, 255, 255);" ></i></button>
       </div>
       <div class="menuTabla contenedor2">
         <table class="table table-custom ">
           <thead>
             <tr>
-              <th scope="col">ID </th>
-              <th scope="col">NOMBRE</th>
-              <th scope="col">DESCRIPCIÓN</th>
-              <th scope="col">IMAGEN</th>
+              <th scope="col">ID DETALLE</th>
+              <th scope="col">FACTURA ID</th>
+              <th scope="col">PRODUCTO</th>
+              <th scope="col">CANTIDAD</th>
+              <th scope="col">PRECIO VENTA</th>
               <th scope="col">ELIMINAR</th>
-              <th scope="col">ACTUALIZAR</th>
             </tr>
           </thead>
           <tbody class="" id="tabla">
 
             <!-- ///////Llenado DInamico desde la Base de Datos -->
-         
-            <?php
-            foreach ($allCategory as $key => $val) {
+            <?php 
+            foreach($allFacturaD as $factura){
             ?>
+            
             <tr>
-              <td> <?php echo $val['categoria_id']?></td>
-              <td> <?php echo $val['nombre']?></td>
-              <td> <?php echo $val['descripcion']?></td>
-              <td><img src="<?php echo $val['imagen']?>" alt="..." width="80px" ></td>
-              <td> <a  class="btn btn-danger" href="borrarCategoria.php?categoria_id=<?= $val['categoria_id']?>&&req=delete">BORRAR </a></td>
-              <td> <a  class="btn btn-primary" href="editarCategoria.php?categoria_id=<?=$val['categoria_id']?>">MODIFICAR </a></td>
+              <td><?=$factura['fac_detalle_id'];?></td>
+              <td><?=$factura['factura_id'];?></td>
+              <td><?=$factura['producto'];?></td>
+              <td><?=$factura['unidades_pedidas'];?></td>
+              <td><?=$factura['precio_venta'];?></td>
+              <td><a class="btn btn-danger" href="borrasDetalle.php?fac_detalle_id=<?=$factura['fac_detalle_id']?>&&req=delete">Borrar</a></td>
             </tr>
 
+            <?php
+            }
+            ?>
+       
+
           </tbody>
-        <?php
-        }    
-        ?>
+        
         </table>
 
       </div>
 
 
     </div>
-
 
     <div class="parte-derecho " id="detalles">
       <h3>Detalle</h3>
@@ -128,49 +146,57 @@ $allCategory = $data->obtenerCategory();
     </div>
 
 
+
+
+
     <!-- /////////Modal de registro de nuevo estuiante //////////-->
-    <div class="modal fade" id="registrarCategoria" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="backdrop-filter: blur(5px)">
+    <div class="modal fade" id="registrarDetalle" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="backdrop-filter: blur(5px)">
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
         <div class="modal-content" >
           <div class="modal-header" >
-            <h1 class="modal-title fs-5" id="exampleModalLabel">CATEGORIAS</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Nueva Factura Detalle</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body" style="background-color: rgb(231, 253, 246);">
-            <form class="col d-flex flex-wrap" action="registrarCategoria.php" method="post">
+
+            <form class="col d-flex flex-wrap" action="registrarDetalle.php" method="post">
               <div class="mb-1 col-12">
-                <label for="nombre" class="form-label">NOMBRE</label>
-                <input 
-                  type="text"
-                  id="nombre"
-                  name="nombre"
-                  class="form-control"  
-                />
+                <label for="factura" class="form-label">FACTURA ID</label>
+
+                <select class="form-control" name="factura" id="factura" required>
+                <option value="select">Seleccione el id de la factura</option>
+                  <?php
+                  foreach($allFactura as $factura){
+                  ?>
+
+                  <option name="factura" value="<?=$factura['factura_id'];?>"><?=$factura['factura_id']?></option>
+
+                  <?php
+                  }
+                  ?>
+                </select>
+                
               </div>
 
               <div class="mb-1 col-12">
-                <label for="descripcion" class="form-label">DESCRIPCIÓN</label>
-                <input 
-                  type="text"
-                  id="descripcion"
-                  name="descripcion"
-                  class="form-control"  
-                />
+                <label for="producto" class="form-label">PRODUCTO</label>
+                <select class="form-control" name="producto" id="producto" required>
+                <option value="select">Seleccione el producto</option>
+                  <?php
+                  foreach($allProducto as $producto){
+                  ?>
+
+                  <option name="producto" value="<?=$producto['producto_id'];?>"><?=$producto['nombre_producto']?></option>
+
+                  <?php
+                  }
+                  ?>
+                </select>
               </div>
 
-              <div class="mb-1 col-12">
-                <label for="imagen" class="form-label">IMAGEN</label>
-                <input 
-                  type="text"
-                  id="imagen"
-                  name="imagen"
-                  class="form-control"  
-                 
-                />
-              </div>
 
               <div class=" col-12 m-2">
-                <input type="submit" class="btn btn-primary" value="ADD CATEGORIA" name="guardarCategoria"/>
+                <input type="submit" class="btn btn-primary" value="guardar" name="guardarFacturaDetalle"/>
               </div>
             </form>  
          </div>       

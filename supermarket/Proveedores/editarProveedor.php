@@ -84,7 +84,7 @@
               <i class="bi bi-people"></i>
               <h3 style="margin: 0px;font-weight: 800;">Facturas</h3>
             </a>
-            <a href="../detailFactura/detailFactura.php" style="display: flex;gap:1px;">
+            <a href="../FacturaDetalle/facturaDetalle.php" style="display: flex;gap:1px;">
               <i class="bi bi-people"></i>
               <h3 style="margin: 0px;font-weight: 800;">Factura Detalle</h3>
             </a>
