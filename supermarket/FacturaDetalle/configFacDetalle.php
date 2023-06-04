@@ -71,7 +71,7 @@ class Detalle extends Conexion{
             
     public function obtenerFacturaDetalleInner(){
         try {
-            $stm = $this -> dbCnx -> prepare("SELECT facturadetalle.fac_detalle_id, facturas.factura_id,productos.nombre_producto AS producto,productos.unidades_pedidas,facturadetalle.precio_venta * productos.precio_unitario AS precio_venta FROM facturadetalle INNER JOIN facturas ON facturadetalle.factura_id = facturas.factura_id INNER JOIN productos ON facturadetalle.producto_id = productos.producto_id ; ");
+            $stm = $this -> dbCnx -> prepare("SELECT facturadetalle.fac_detalle_id, facturas.factura_id,productos.nombre_producto AS producto,productos.unidades_pedidas,productos.unidades_pedidas * productos.precio_unitario AS precio_venta FROM facturadetalle INNER JOIN facturas ON facturadetalle.factura_id = facturas.factura_id INNER JOIN productos ON facturadetalle.producto_id = productos.producto_id ; ");
             $stm -> execute();
             return $stm -> fetchAll();
         } catch (Exception $e) {
