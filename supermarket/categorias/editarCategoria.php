@@ -61,7 +61,7 @@
         </div>
         <div class="menus">
           
-          <a href="../home/home.php" style="display: flex;gap:2px;">
+          <a href="../Home/home.php" style="display: flex;gap:2px;">
               <i class="bi bi-house-door"> </i>
               <h3 style="margin: 0px;">Home</h3>
             </a>
@@ -97,6 +97,7 @@
         </div>
       </div>
 
+      
       <div class="parte-media">
           <h2 class="m-2">MODIFICAR CATEGORIA</h2>
         <div class="menuTabla contenedor2">
@@ -148,9 +149,12 @@
       </div>
 
       </div>
+    
+     
 
     </div>
 
+  
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"

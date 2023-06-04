@@ -1,0 +1,245 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  overflow: hidden;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    margin: 0;
+    
+   
+  }
+
+  .contenedor2{
+    overflow: auto;
+    height: calc(100vh - 100px);
+
+  }
+  
+
+  .parte-media {
+    background-color:#ffeaff ;
+    width: 60%;
+    padding: 20px;
+    border-radius: 10px;
+    border-right: 2px solid #e1d9ee;
+    overflow-x: auto;
+   
+
+  }
+  
+  .parte-derecho {
+    background-color:#e6c7ff ;
+    width: 25%;
+    padding: 20px;
+    border-radius: 10px;
+   
+
+   
+   
+  
+  }
+  .imagenPerfil{
+   
+    width: 60%;
+    height: 70%;
+   
+  }
+
+
+
+  .perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size:large;  font-weight: 800;
+    
+
+  }
+  .perfil h3{
+ 
+    font-size:large;  font-weight: 800;
+    margin-top: 10px;
+    
+
+  }
+
+  a{
+    text-decoration: none;
+    font-weight: lighter;
+    color: black;
+  }
+
+
+  .menus{
+    padding-left: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+   
+    gap: 40px;
+  }
+
+  .menus h3{
+    font-weight: lighter;
+    font-size:large
+   
+  }
+  
+   .menus a:hover{
+    background-color:#b29ee9;
+    padding: 5px;
+    color: white;
+    margin: 5px;
+    font-weight: 800;
+ 
+   
+  }
+
+
+  i{
+    margin-right: 1rem;
+    font-size: large;
+  }
+
+  .tabla{
+    display: flex;
+    gap: 20px;
+  }
+
+  
+
+  .cards{
+   
+    background-color: rgb(219, 196, 234);
+    
+    
+    
+    
+
+  }
+
+  .cards:hover{
+    background-color: rgb(190, 146, 212);
+
+  }
+
+
+
+
+  .cards img{
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    object-fit: cover;
+    
+   
+  }
+
+/* 
+ .cards .btn{
+    border: none;
+    background: none;
+    box-shadow: none;
+    outline: none;
+    margin: 10px 20px 10px 20px;
+  
+    
+    width: 150px;
+    height: 40px;
+    object-fit: cover;
+    background-color: rgb(255, 153, 0);
+    text-decoration: none;
+    
+    border-radius: 10PX;
+    color: #fff9f9;
+    font-weight: 800;
+
+
+  } */
+
+
+
+
+
+ .btn-m{
+    border: none;
+    background: none;
+    box-shadow: none;
+    outline: none;
+    margin: 10px 20px 10px 20px;
+  
+    
+    width: 150px;
+    height: 40px;
+    object-fit: cover;
+    background-color:#d183ff;
+    text-decoration: none;
+    
+    border-radius: 10PX;
+    color: #fff9f9;
+    font-weight: 800;
+
+
+  }
+ 
+
+ 
+
+
+
+
+
+
+  .table>tbody {
+    vertical-align: sub !important;
+}
+
+.table-custom {
+  border-collapse: separate;
+  border-spacing: 0 10px; 
+}
+
+.table-custom tbody tr {
+  background-color:#ffeaff ; 
+  border-radius: 15px; 
+  
+}
+
+/* ////////////////////////////   STYLOS PARTE IZQUIERADA //////////////////////////////// */
+.parte-izquierda {
+  background-color:#ffeaff;
+  width: 15%;
+  border-right: 2px solid rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+
+
+}
+
+
+
+
+.datos{
+  display: flex;
+  flex-direction: column;
+  
+
+}
+
+
+.datos img {
+  width: 150px;
+  height: 180px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+
+

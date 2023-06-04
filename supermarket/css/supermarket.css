@@ -1,4 +1,7 @@
 
+
+
+
 body{
     font-family: 'Montserrat', sans-serif;
     height: 100%;
@@ -244,4 +247,6 @@ body{
   
   
   
-  
+  .carousel-inner {
+    margin-top: 100px;
+  }
