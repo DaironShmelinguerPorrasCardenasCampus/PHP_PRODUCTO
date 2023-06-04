@@ -4,6 +4,8 @@ require_once("../login/LoginUser.php");
 session_start();
 
 
+
+
 ?>
 
 
@@ -70,7 +72,10 @@ session_start();
                     <i class="bi bi-people"></i>
                     <h3 style="margin: 0px;font-weight: 800;">Factura Detalle</h3>
                 </a>
-
+                <a href="../login/loginRegister.php" style="display: flex;gap:2px;color: brown;">
+                    <i class="bi bi-x-square"></i>
+                    <h3 style="margin: 0px;">salir</h3>
+                </a>
 
             </div>
         </div>
@@ -145,16 +150,16 @@ session_start();
         <div class="parte-derecho">
             <p>PROMOCIONES</p>
             <div class="container">
-              <div class="row">
-                <div class="col"><img src="../css/p1.png" class="img-fluid" alt="..."></div>
-                <div class="col"><img src="../css/p2.png" class="img-fluid" alt="..."></div>
-              </div>
+                <div class="row">
+                    <div class="col"><img src="../css/p1.png" class="img-fluid" alt="..."></div>
+                    <div class="col"><img src="../css/p2.png" class="img-fluid" alt="..."></div>
+                </div>
             </div><br>
             <div class="container">
-              <div class="row">
-                <div class="col"><img src="../css/p3.png" class="img-fluid" alt="..."></div>
-                <div class="col"><img src="../css/p4.png" class="img-fluid" alt="..."></div>
-              </div>
+                <div class="row">
+                    <div class="col"><img src="../css/p3.png" class="img-fluid" alt="..."></div>
+                    <div class="col"><img src="../css/p4.png" class="img-fluid" alt="..."></div>
+                </div>
             </div>
         </div>
 
