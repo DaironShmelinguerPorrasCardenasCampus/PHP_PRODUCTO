@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(empty($_SESSION) || !$_SESSION['username']){
+    echo "<script> alert('SU SESION HA FINALIZADO.');document.location = '../login/loginRegister.php'</script>";
+} 
 require_once("configCategory.php");
 $data = new Category();
 $allCategory = $data->obtenerCategory();

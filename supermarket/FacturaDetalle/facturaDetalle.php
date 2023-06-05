@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(empty($_SESSION) || !$_SESSION['username']){
+    echo "<script> alert('SU SESION HA FINALIZADO.');document.location = '../login/loginRegister.php'</script>";
+} 
  ini_set("display_errors", 1);
  ini_set("display_startup_errors", 1);
  error_reporting(E_ALL);
@@ -120,7 +124,7 @@ $allFactura = $dataFactura -> obtenerFacturaInner();
               <td><?=$factura['factura_id'];?></td>
               <td><?=$factura['producto'];?></td>
               <td><?=$factura['unidades_pedidas'];?></td>
-              <td><?=$factura['precio_venta'];?></td>
+              <td><?=$factura['total_pagar'];?></td>
               <td><a class="btn btn-danger" href="borrasDetalle.php?fac_detalle_id=<?=$factura['fac_detalle_id']?>&&req=delete">Borrar</a></td>
             </tr>
 

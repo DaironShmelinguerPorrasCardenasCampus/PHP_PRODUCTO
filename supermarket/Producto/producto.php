@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(empty($_SESSION) || !$_SESSION['username']){
+    echo "<script> alert('SU SESION HA FINALIZADO.');document.location = '../login/loginRegister.php'</script>";
+} 
+
  ini_set("display_errors", 1);
  ini_set("display_startup_errors", 1);
  error_reporting(E_ALL);
