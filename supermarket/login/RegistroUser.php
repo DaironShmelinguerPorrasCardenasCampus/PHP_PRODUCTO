@@ -103,6 +103,10 @@ public function MostrarRol(){
 
 }
 
+ public function logout() {
+        session_start();
+        session_destroy();
+    }
 
 
 

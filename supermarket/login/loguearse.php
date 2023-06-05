@@ -22,9 +22,4 @@ if(isset($_POST['loguearse'])){
 }
 
 
-
-
-
-
-
 ?>

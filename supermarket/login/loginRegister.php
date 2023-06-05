@@ -1,6 +1,9 @@
 <?php
+
 require_once("RegistroUser.php");
+
 $data = new RegistrarUser();
+$data->logout();
 $allRol = $data->MostrarRol();
 ?>
 <!DOCTYPE html>

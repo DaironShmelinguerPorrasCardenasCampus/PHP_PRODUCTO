@@ -62,7 +62,7 @@ class Detalle extends Conexion{
     public function insertFacturaDetalle(){
         try {
             $stm = $this-> dbCnx -> prepare("INSERT INTO facturadetalle(factura_id,producto_id,cantidad,precio_venta) VALUE (?,?,?,?)");
-            $stm -> execute([$this->facturaId, $this->productoId, $this->cantidad, $this->precio_venta]);
+            $stm -> execute([$this->facturaId, $this->productoId, 0, 0]);
         } catch (Exception $e) {
             echo $e -> getMessage();
         }
@@ -71,7 +71,7 @@ class Detalle extends Conexion{
             
     public function obtenerFacturaDetalleInner(){
         try {
-            $stm = $this -> dbCnx -> prepare("SELECT facturadetalle.fac_detalle_id, facturas.factura_id,productos.nombre_producto AS producto,productos.unidades_pedidas,productos.unidades_pedidas * productos.precio_unitario AS precio_venta FROM facturadetalle INNER JOIN facturas ON facturadetalle.factura_id = facturas.factura_id INNER JOIN productos ON facturadetalle.producto_id = productos.producto_id ; ");
+            $stm = $this -> dbCnx -> prepare("SELECT facturadetalle.fac_detalle_id, facturas.factura_id,productos.nombre_producto AS producto,productos.unidades_pedidas ,productos.unidades_pedidas * productos.precio_unitario AS total_pagar FROM facturadetalle INNER JOIN facturas ON facturadetalle.factura_id = facturas.factura_id INNER JOIN productos ON facturadetalle.producto_id = productos.producto_id ; ");
             $stm -> execute();
             return $stm -> fetchAll();
         } catch (Exception $e) {

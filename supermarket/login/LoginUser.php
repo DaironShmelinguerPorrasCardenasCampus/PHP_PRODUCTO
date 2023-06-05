@@ -73,10 +73,7 @@ class LoginUser extends Conexion{
         }
     }
 
-    public function logout() {
-        session_start();
-        session_destroy();
-    }
+   
 
 
 }
