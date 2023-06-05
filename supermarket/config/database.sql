@@ -34,7 +34,7 @@ Foreign Key (fac_cliente_id) REFERENCES clientes(cliente_id)
 
 );
 
-CREATE TABLE FacturaDetalle(
+CREATE TABLE facturadetalle(
 fac_detalle_id INT PRIMARY KEY AUTO_INCREMENT,
 factura_id INT,
 producto_id INT,
@@ -75,7 +75,7 @@ nombre_rol VARCHAR(50)
 INSERT INTO rol (nombre_rol)
 VALUES
     ('EMPLEADO'),
-    ('USUARIO')
+    ('USUARIO');
 
 CREATE TABLE user(
 
